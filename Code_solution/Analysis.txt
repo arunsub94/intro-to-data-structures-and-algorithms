@@ -1,0 +1,46 @@
+Time Complexity Analysis 
+
+Project Submission: Unscramble Computer Science Problems
+
+Task 0:
+Worst case Big O notation: O(1)
+Since this task merely prints the first and last record from a list of records, the time complexity of this 
+task does not depend on the size of the input and hence O(1) would be the worst case Big O notation. 
+
+Task 1:
+Worst case Big O notation: O(n squared)
+The function getUniquePhoneNumbersFromRecords iterates through every record present using a for loop (O(n)) and during each iteration, 
+the function checks whether the current phone number is present in the list of phone numbers to eliminate duplicates (O(n)) and since
+these two operations are nested, this results in a O(n squared) time complexity for the function. Then, I use the len operation 
+which is O(1) complexity. 
+
+Task 2: 
+Worst case Big O notation: O(n squared) + O(n squared) + O(n)
+Approximation: O(n squared) + O(n)
+This task invokes the getUniquePhoneNumbersFromRecords (O(n sq) complexity) to populate the phone_number_record variable. 
+Then a for loop iterates through each number in this record and within this another for loop loops through the 
+call log (O(n sq) complexity). This is followed by max operation on dict which is of O(n) complexity worst case. 
+
+Task 3: 
+Worst case Big O notation: 
+PART A: O(n squared) + O(n) + O(n cubed) + O(nlogn) + O(n)
+Approximation: O(n cubed) + O(n squared) + O(nlogn) + O(n)
+This task involves calling getUniquePhoneNumbersFromRecords function once (O(n squared) complexity, followed by 
+a list comprehesion command that iterates through the records (O(n) complexity), followed by another two-for loop iteration which has an
+in operator within it of O(n) complexity, so this aggregates to O(n cubed). This is followed by a sorting operation of O(nlogn) complexity
+and a for loop to print which is O(n).
+
+
+PART B: O(n squared)
+This task involves running a for loop to iterate through each phone number in the fixed number records and another for loop to run through calls list.
+
+Task 4: Worst case Big O notation: O(n squared) + O(n) + O(n) + O(n squared) + O(nlogn) + O(n)
+Approximation: O(n squared) + O(nlogn) + O(n)
+O(n squared): Invoking getUniquePhoneNumbersFromRecords function
+O(n): list comprehension to populate callers and receivers
+O(n): conversion of list to set to remove duplciates
+O(n squared): for loop to iterate through records - O(n) and in & not in operations within for loop O(n)
+O(nlogn): sorting the list
+O(n): for loop to print list of telemarketers
+
+
